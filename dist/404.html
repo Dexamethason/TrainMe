@@ -5,7 +5,18 @@
   <meta http-equiv="refresh" content="0;url=./">
   <title>Przekierowanie</title>
   <script type="text/javascript">
-    window.location.href = './' + window.location.pathname.replace('/TrainMe/', '');
+    // Poprawione przekierowanie, które działa niezależnie od bazowej ścieżki
+    var path = window.location.pathname;
+    var redirectPath = './';
+    if (path.includes('/')) {
+      // Pobierz część ścieżki po ostatnim ukośniku
+      var segments = path.split('/');
+      var lastSegment = segments[segments.length - 1];
+      if (lastSegment && lastSegment !== '') {
+        redirectPath += lastSegment;
+      }
+    }
+    window.location.href = redirectPath;
   </script>
 </head>
 <body>

@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 // Dynamicznie ustawiamy bazową ścieżkę w zależności od środowiska
 export default defineConfig({
   plugins: [vue()],
-  base: process.env.NODE_ENV === 'production' ? '/TrainMe/' : './',
+  base: process.env.NODE_ENV === 'production' ? './' : './',
   build: {
     rollupOptions: {
       output: {
