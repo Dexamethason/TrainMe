@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dexamethason.github.io/TrainMe/",
+  "homepage": "https://dexamethason.github.io/TrainMe",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
